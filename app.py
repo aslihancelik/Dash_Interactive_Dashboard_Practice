@@ -6,7 +6,6 @@ import plotly.express as px
 
 app = dash.Dash(__name__)  # initialize a Dash app, create a new instance of Dash app
 
-fig = px.line(x=[1, 2, 3], y=[10, 20, 30])
 x_values = [0]
 y_values = [0]
 
@@ -92,8 +91,6 @@ def update_content(n_clicks):
     fig = update_graph(n_clicks)
 
     return text, fig #return both updates
-
-
 
 
 #this ensures the Dash server starts only when the script is run directly, not when it's imported into another module
